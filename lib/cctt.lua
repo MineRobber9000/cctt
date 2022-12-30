@@ -3,10 +3,9 @@ if not package.path:find("/lib/?") then package.path=package.path..";/lib/?;/lib
 
 if not pcall(require,"cbor") then
     if not http then
-        error"Requires CBOR library (not found, cannot download (no HTTP))\n\nDownload a copy from https://github.com/osmarks/skynet/raw/master/cbor.lua and place it in the lib/ directory."
+        error"Requires CBOR library (not found, cannot download (no HTTP))\n\nDownload a copy from https://github.com/MineRobber9000/cctt/raw/main/lib/cbor.lua and place it in the lib/ directory."
     end
-    -- steal the skynet download link
-    local h=http.get"https://github.com/osmarks/skynet/raw/master/cbor.lua"
+    local h=http.get"https://github.com/MineRobber9000/cctt/raw/main/lib/cbor.lua"
     local f=fs.open("lib/cbor.lua","w")
     f.write(h.readAll())
     f.close()
